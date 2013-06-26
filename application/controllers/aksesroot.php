@@ -21,7 +21,7 @@ class Aksesroot extends CI_Controller {
 			$data["lvl"]=$pecah[3];
 			if($data["lvl"]=="spradmn")
 			{
-				$data["judul"] = "Dashboard - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Dashboard - lapakcms";
 				$this->load->view('admin/bg_top',$data);
 				$this->load->view('admin/bg_home',$data);
 				$this->load->view('admin/bg_footer',$data);
