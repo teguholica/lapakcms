@@ -1,11 +1,40 @@
-<?php
-echo $scriptmce;
-?>
-<div class="clear"></div>
-<div id="content-outer">
-<!-- start content -->
-<div id="content">
-	<div id="page-heading">
+
+<div class="container-fluid">
+	<form class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">Kode Produk</label>
+			<div class="controls">
+				<div class="row-fluid">
+					<input type="text" id="inputEmail" class="input-block-level span3"> - 
+					<input type="text" id="inputEmail" class="input-block-level span3">
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputPassword">Password</label>
+			<div class="controls">
+				<input type="password" id="inputPassword" placeholder="Password">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox"> <input type="checkbox"> Remember me
+				</label>
+				<button type="submit" class="btn">Sign in</button>
+			</div>
+		</div>
+	</form>
+	<form method="post"
+		action="<?php echo base_url();?>aksesroot/aksilogin">
+		<input type="text" class="input-block-level" placeholder="Email"
+			name="username"> <input type="password" class="input-block-level"
+			placeholder="Kata sandi" name="password"> <input type="password"
+			class="input-block-level" placeholder="Isikan kode diatas"
+			name="captcha"> <label class="checkbox"> <input type="checkbox"
+			value="remember-me">Ingat akun ini
+		</label>
+		<button class="btn btn-primary" type="submit">Masuk</button>
+	</form>
 	<?php if($lvl=="spradmn"){ $p = "Super Admin"; } else{ $p = "User Biasa"; } ?>
 		<h1><?php echo $judul; ?></h1><br>		<table width="98%" cellpadding="10">
 		<tr><td valign="top">
@@ -45,10 +74,4 @@ echo $scriptmce;
 	</fieldset>
 		</td></tr>
 		</table>
-	</div>
-	<div class="clear">&nbsp;</div>
 </div>
-<!--  end content -->
-<div class="clear">&nbsp;</div>
-</div>
-

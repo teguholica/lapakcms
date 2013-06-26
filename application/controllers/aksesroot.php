@@ -1206,7 +1206,7 @@ class Aksesroot extends CI_Controller {
 						$data["digit_akhir"] = $a->akhir+1;
 					}
 				}
-				$data["judul"] = "Tambah Produk - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Tambah Produk";
 				$this->load->view('admin/bg_top',$data);
 				$this->load->view('admin/bg_tambah_produk',$data);
 				$this->load->view('admin/bg_footer',$data);
