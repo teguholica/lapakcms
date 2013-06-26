@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/ci-sandal-online/';
+$config['base_url']	= 'http://localhost/lapakcms/';
 //$config['base_url']	= 'http://sandal.sman1-wongsorejo.com/';
 $config['site_url']	= $config['base_url'];
 
