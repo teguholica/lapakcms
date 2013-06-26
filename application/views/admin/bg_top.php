@@ -119,10 +119,15 @@ body>.navbar .brand {
 	                    <li class="dropdown">
 	                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Produk <b class="caret"></b></a>
 	                        <ul class="dropdown-menu">
+		                        <li class="nav-header">Produk</li>
 		                        <li><a href="<?php echo base_url(); ?>aksesroot/lihat_produk">Lihat Semua Produk</a></li>
 								<li><a href="<?php echo base_url(); ?>aksesroot/tambah_produk">Tambah Produk</a></li>
+								<li class="divider"></li>
+		                        <li class="nav-header">Kategori</li>
 								<li><a href="<?php echo base_url(); ?>aksesroot/lihat_kategori_produk">Lihat Semua Kategori Produk</a></li>
 								<li><a href="<?php echo base_url(); ?>aksesroot/tambah_kategori_produk">Tambah Kategori Produk</a></li>
+								<li class="divider"></li>
+		                        <li class="nav-header">Katalog</li>
 								<li><a href="<?php echo base_url(); ?>aksesroot/lihat_katalog">Lihat Katalog Produk</a></li>
 								<li><a href="<?php echo base_url(); ?>aksesroot/tambah_katalog">Tambah Katalog Produk</a></li>
 	                        </ul>

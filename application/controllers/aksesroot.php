@@ -1240,7 +1240,7 @@ class Aksesroot extends CI_Controller {
 			{
 	   			$data['scriptmce'] = $this->scripttiny_mce();
 				$data["kat"] = $this->sandal_admin_model->tampil_semua_kategori();
-				$data["judul"] = "Tambah Kategori Produk - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Tambah Kategori Produk";
 				$this->load->view('admin/bg_top',$data);
 				$this->load->view('admin/bg_tambah_kategori_produk',$data);
 				$this->load->view('admin/bg_footer',$data);
