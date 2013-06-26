@@ -276,19 +276,17 @@ class Aksesroot extends CI_Controller {
 				$offset = $page;
 				endif;	
 				
-				$data["judul"] = "Semua Produk - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Semua Produk";
 				$data["tampil"] = $this->sandal_admin_model->tampil_semua_produk($limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_produk','');
 				
+				$this->load->helper("pagination_bootstrap");
 				$config['base_url'] = base_url() . 'aksesroot/lihat_produk/';
-					$config['total_rows'] = $tot_hal->num_rows();
-					$config['per_page'] = $limit;
-					$config['uri_segment'] = 3;
-					$config['first_link'] = 'Awal';
-					$config['last_link'] = 'Akhir';
-					$config['next_link'] = 'Selanjutnya';
-					$config['prev_link'] = 'Sebelumnya';
-					$this->pagination->initialize($config);
+				$config['total_rows'] = $tot_hal->num_rows();
+				$config['per_page'] = $limit;
+				$config['uri_segment'] = 3;
+				$config = array_merge($config,pagination_bootstrap_config());
+				$this->pagination->initialize($config);
 				$data["paginator"] =$this->pagination->create_links();
 				
 				$this->load->view('admin/bg_top',$data);
