@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <div id="footer">
 <div id="inner-footer">
 <div id="left-footer">
@@ -20,13 +14,18 @@
 </div>
 <div id="big-sub-content-footer"></div>
 </div>
+
 <div id="right-footer">
-<div id="big-sub-content-title">Bergabung Dengan Grup Kami Di Facebook</div>
-<div id="big-sub-content-center">
-<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fharmonisgrosirsandal&amp;width=460&amp;colorscheme=light&amp;connections=8&amp;stream=false&amp;header=false&amp;height=180" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:460px; height:180px;" allowTransparency="true"></iframe>
+	<div class="sidebar-widget">
+		<section class="sidebar-widget-header"><h3>Bergabung bersama kami di instagram</h3></section>
+		<section class="sidebar-widget-content">
+			<div id="sub-content-center">
+				<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fteguholica&amp;width=460&amp;colorscheme=light&amp;connections=8&amp;stream=false&amp;header=false&amp;height=180" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:460px; height:180px;" allowTransparency="true"></iframe>
+			</div>
+		</section>
+	</div>
 </div>
-<div id="big-sub-content-footer"></div>
-</div>
+
 <div class="cleaner_h10"></div>
 <div id="menu-footer">Beranda | Tentang Kami | Cara Belanja | Konfirmasi Pembayaran | Hubungi Kami | Site Map Produk | Keranjang Belanja</div>
 <div id="copy-footer">Copyright &copy; 2011 Grosir Sandal Online. All Rights Reserved.<br />
