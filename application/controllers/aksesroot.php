@@ -185,7 +185,7 @@ class Aksesroot extends CI_Controller {
 				endif;
 				
 				
-				$data["judul"] = "Semua Member - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Semua Member";
 				$data["ls"] = $this->sandal_admin_model->tampil_daftar_member($limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_user','');
 				
@@ -231,7 +231,7 @@ class Aksesroot extends CI_Controller {
 				endif;
 				
 				
-				$data["judul"] = "Semua Testimonial - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Semua Testimonial";
 				$data["ls"] = $this->sandal_admin_model->tampil_testimonial($limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_testimonial','');
 				
@@ -319,19 +319,21 @@ class Aksesroot extends CI_Controller {
 				$offset = $page;
 				endif;	
 				
-				$data["judul"] = "Semua Intermezzo - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Semua Intermezzo";
 				$data["tampil"] = $this->sandal_admin_model->tampil_semua_berita($limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_intermezzo','');
 				
+				$this->load->helper("pagination_bootstrap");
 				$config['base_url'] = base_url() . 'aksesroot/lihat_semua_intermezzo/';
-					$config['total_rows'] = $tot_hal->num_rows();
-					$config['per_page'] = $limit;
-					$config['uri_segment'] = 3;
-					$config['first_link'] = 'Awal';
-					$config['last_link'] = 'Akhir';
-					$config['next_link'] = 'Selanjutnya';
-					$config['prev_link'] = 'Sebelumnya';
-					$this->pagination->initialize($config);
+				$config['total_rows'] = $tot_hal->num_rows();
+				$config['per_page'] = $limit;
+				$config['uri_segment'] = 3;
+				$config['first_link'] = 'Awal';
+				$config['last_link'] = 'Akhir';
+				$config['next_link'] = 'Selanjutnya';
+				$config['prev_link'] = 'Sebelumnya';
+				$config = array_merge($config,pagination_bootstrap_config());
+				$this->pagination->initialize($config);				
 				$data["paginator"] =$this->pagination->create_links();
 				
 				$this->load->view('admin/bg_top',$data);
@@ -376,7 +378,7 @@ class Aksesroot extends CI_Controller {
 				} else {
 					$data['kata'] = $this->session->userdata('trans_harian');
 				}
-				$data["judul"] = "Transaksi Harian - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Transaksi Harian";
 				$data["tampil"] = $this->sandal_admin_model->tampil_trans_harian($data['kata'],$limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_transaksi_detail',"where kode_transaksi like '%".$data['kata']."%'");
 				
@@ -432,7 +434,7 @@ class Aksesroot extends CI_Controller {
 				} else {
 					$data['kata'] = $this->session->userdata('trans_bulanan');
 				}
-				$data["judul"] = "Transaksi Bulanan - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Transaksi Bulanan";
 				$data["tampil"] = $this->sandal_admin_model->tampil_trans_harian($data['kata'],$limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_transaksi_detail',"where kode_transaksi like '%".$data['kata']."%'");
 				
@@ -557,7 +559,7 @@ class Aksesroot extends CI_Controller {
 				$offset = $page;
 				endif;	
 				
-				$data["judul"] = "Semua Katalog Produk - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Semua Katalog Produk";
 				$data["katalog"] = $this->sandal_admin_model->tampil_katalog($limit,$offset);
 				$tot_hal = $this->sandal_model->hitung_isi_1tabel('tbl_katalog','');
 				
@@ -1273,7 +1275,7 @@ class Aksesroot extends CI_Controller {
 			if($data["lvl"]=="spradmn")
 			{
 	   			$data['scriptmce'] = $this->scripttiny_mce();
-				$data["judul"] = "Tambah Katalog Produk - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Tambah Katalog Produk";
 				$this->load->view('admin/bg_top',$data);
 				$this->load->view('admin/bg_tambah_katalog',$data);
 				$this->load->view('admin/bg_footer',$data);
@@ -1306,7 +1308,7 @@ class Aksesroot extends CI_Controller {
 			if($data["lvl"]=="spradmn")
 			{
 	   			$data['scriptmce'] = $this->scripttiny_mce();
-				$data["judul"] = "Tambah Intermezzo - Harmonis Grosir Sandal Online";
+				$data["judul"] = "Tambah Intermezzo";
 				$this->load->view('admin/bg_top',$data);
 				$this->load->view('admin/bg_tambah_intermezzo',$data);
 				$this->load->view('admin/bg_footer',$data);
