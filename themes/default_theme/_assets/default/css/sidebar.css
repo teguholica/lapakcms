@@ -1,0 +1,24 @@
+.sidebar-widget{
+	background-color: white;
+    border: 1px solid #D3D1D0;
+    border-radius: 10px 10px 10px 10px;
+    height: 100%;
+}
+
+.sidebar-widget-header{
+	background: linear-gradient(#FDFBF9, #EEEEEE) repeat scroll 0 0 transparent;
+	border-radius: 10px 10px 0 0;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.12);
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar-widget-header h3{
+	margin: 0px;
+}
+
+.sidebar-widget-content{
+	padding: 10px;
+}

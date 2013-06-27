@@ -1,17 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
-<meta name="author" content="Gede Lumbung" /> 
-<meta name="keywords" content="sandal online, jual sandal, sandal murah, sandal online murah, toko sandal online"> 
-<meta name="description" content="Selamat datang di grosirsandalonline.com. kami menyediakan berbagai sandal dari anak-anak hingga dewasa. Dengan minimal pembelian 5 pasang berseri. Nikmati kemudahan dan berbagai keuntungan yang kami berikan disetiap kesempatannya. Kami tidak membebani anda dengan barang yag tidak laku atau cacat. Anda bisa tukar kembali dengan syarat barang masih utuh dan cacat bukan karena disengaja tapi murni dari kesalahan pabrik. Komitmen kami ingin menjadi mitra bisnis Anda."> 
+<meta name="author" content="Teguh Arifianto" /> 
+<meta name="keywords" content="lapakcms"> 
+<meta name="description" content="lapakcms"> 
 <title><?php echo $judul; ?></title>
 <link href="<?php echo base_url(); ?>asset/images/icon.png" rel="shortcut icon" />
 <link href="<?php echo base_url(); ?>asset/css/style.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url(); ?>asset/css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url(); ?>asset/css/jquery.simpledialog.0.1.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>asset/css/jquery.fancybox-1.3.4.css" media="screen" />
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/js/jquery-1.4.js" ></script>
+<script type="text/javascript" src="<?php echo base_url();?>themes/default_theme/_assets/jquery/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/jquery.jcarousel.min.js" ></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/vtip.js" ></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/jquery.js" ></script>
@@ -23,8 +25,19 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/demo.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/jquery.simpledialog.0.1.js"></script>
 
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo base_url();?>themes/default_theme/_assets/nivo-slider/jquery.nivo.slider.js"></script>
+
+<link href="<?php echo base_url();?>/themes/default_theme/_assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="<?php echo base_url();?>themes/default_theme/_assets/default/css/style.css" type="text/css" media="screen" />
+
 <script type="text/javascript">
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 			$("a[rel=example_group]").fancybox({
 			
 				'transitionIn'		: 'none',
@@ -34,7 +47,7 @@
 					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
 				}
 			});
-		});
+		});*/
 </script>
 <script type="text/javascript">
 
@@ -47,12 +60,10 @@ ddsmoothmenu.init({
 })
 </script>
 <script type="text/javascript"> 
-$(document).ready( function()
-	{	
-		$('#lofslidecontent45').lofJSidernews( { interval:4000,
-												 easing:'easeInOutQuad',
-												duration:1000,
-												auto:true } );						
+	$(document).ready( function(){	
+		$('#slider').nivoSlider({
+			controlNav	: false
+		});				
 	});
 	function slidePordukBaru()
 	{
@@ -68,8 +79,6 @@ $(document).ready( function()
 	}
 	setInterval(slidePordukBaru, 5000);
 	setInterval(slidePordukLaris, 7000);
-	
-	
 </script>
 
 </head>
@@ -77,81 +86,83 @@ $(document).ready( function()
 <body onLoad="goforit()">
 <div class="cleaner_h5"></div>
 <div id="logo">
-
-<div id="inner-logo">
-<div id="welcome">
-<?php if(empty($_SESSION['username_grosir_sandal'])){ ?>
-<?php
-}
-else{
-?>
-Selamat Datang, <b><?php echo $nama; ?></b> - <a href="<?php echo base_url(); ?>member/logout">Log Out</a>
-<?php } ?>
-
-</div><a href="<?php echo base_url(); ?>katalog">Download Katalog</a> | <a href="<?php echo base_url(); ?>member">Member Area</a> | <script src="<?php echo base_url(); ?>asset/js/clock.js" type="text/javascript"></script><span id="clock"></span><p style="padding-top:5px; margin:0px auto;"></p></div>
+	<div id="logo-content">LAPAKCMS</div>
+	<div id="inner-logo">
+		<div id="welcome">
+			<?php if(empty($_SESSION['username_grosir_sandal'])):?>
+			<?php else:?>
+			Selamat Datang, <b><?php echo $nama; ?></b> - <a href="<?php echo base_url(); ?>member/logout">Log Out</a>
+			<?php endif;?>
+		</div>
+		<a href="<?php echo base_url(); ?>katalog">Download Katalog</a> | <a href="<?php echo base_url(); ?>member">Member Area</a> | <script src="<?php echo base_url(); ?>asset/js/clock.js" type="text/javascript"></script><span id="clock"></span><p style="padding-top:5px; margin:0px auto;"></p>
+	</div>
 </div>
 <div id="menu">
-<div id="menu-kiri">
-<ul>
-<a href="<?php echo $this->config->item('site_url');?>web" title="Beranda - Grosir Sandal Online"><li><img src="<?php echo base_url(); ?>asset/images/icon-home.png" class="menu-img" border="0" />Beranda</li></a>
-
-<a href="<?php echo $this->config->item('site_url');?>profil_sandal_online" title="Profil Kami | Grosir Sandal Online"><li><img src="<?php echo base_url(); ?>asset/images/icon-about.png" class="menu-img" border="0" />Tentang Kami</li></a>
-
-<a href="<?php echo $this->config->item('site_url');?>cara_belanja" title="Cara Belanja | Grosir Sandal Online"><li><img src="<?php echo base_url(); ?>asset/images/icon-how-to.png" class="menu-img" border="0" />Cara Belanja</li></a>
-
-<a href="<?php echo $this->config->item('site_url');?>hubungi_kami" title="Hubungi Kami | Grosir Sandal Online"><li><img src="<?php echo base_url(); ?>asset/images/icon-contact.png" class="menu-img" border="0" />Hubungi Kami</li></a>
-
-<a href="<?php echo $this->config->item('site_url');?>site_map" title="Site Map Website | Grosir Sandal Online"><li><img src="<?php echo base_url(); ?>asset/images/icon-sitemap.png" class="menu-img" border="0" />Site Map Produk</li></a>
-
-<a href="<?php echo $this->config->item('site_url');?>keranjang" title="Keranjang Belanja | Grosir Sandal Onlinee"><li><img src="<?php echo base_url(); ?>asset/images/icon-shopcart.png" class="menu-img" border="0" />Keranjang Belanja</li></a>
-</ul>
+		<div id="menu-kiri">
+			<ul>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-home.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>web" title="Beranda - Grosir Sandal Online">
+						Beranda
+					</a>
+				</li>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-about.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>profil_sandal_online" title="Profil Kami | Grosir Sandal Online">
+						Tentang Kami
+					</a>
+				</li>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-how-to.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>cara_belanja" title="Cara Belanja | Grosir Sandal Online">
+						Cara Belanja
+					</a>
+				</li>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-contact.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>hubungi_kami" title="Hubungi Kami | Grosir Sandal Online">
+						Hubungi Kami
+					</a>
+				</li>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-sitemap.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>site_map" title="Site Map Website | Grosir Sandal Online">
+						Site Map Produk
+					</a>
+				</li>
+				<li>
+					<img src="<?php echo base_url(); ?>asset/images/icon-shopcart.png" class="menu-img" border="0">
+					<a href="<?php echo $this->config->item('site_url');?>keranjang" title="Keranjang Belanja | Grosir Sandal Onlinee">
+						Keranjang Belanja
+					</a>
+				</li>
+				<li id="search">
+				    <form class="form-search" method="post" action="<?php echo base_url(); ?>cari/lihat">
+					    <input type="text" style="width: 170px;" class="input-medium search-query" placeholder='Cari Produk...' name="cari">
+				    </form>
+				</li>
+			</ul>
+		</div>
 </div>
-<div id="menu-kanan"><form method="post" action="<?php echo base_url(); ?>cari/lihat">
-<input type="text" class="input-teks" size="16" value="Cari Produk..." onblur="if(this.value=='') this.value='Cari Produk...';" onfocus="if(this.value=='Cari Produk...') this.value='';" name="cari"  /> <input type="submit" value="Cari" class="input-tombol" /></form>
-</div>
-</div>
+
 <div id="banner">
-
-<div id="lofslidecontent45" class="lof-slidecontent"> 
-<div  class="preload"><div></div></div> 
- <!-- MAIN CONTENT --> 
-<div class="lof-main-outer"> 
-  	<ul class="lof-main-wapper"> 
-	<?php
-		foreach($banner->result_array() as $bn)
-		{
-	?>
-		<li><img src="<?php echo base_url(); ?>asset/banner/<?php echo $bn['gambar']; ?>" /></li>
-	<?php
-		}
-	?>
-    
-	
-	</ul> 
-    </div>          
-    <div class="lof-navigator-outer"> 
-	
-  	<ul class="lof-navigator"> 
-		<?php
-		foreach($banner->result_array() as $bn2)
-		{
-	?>
-		<li> 
-        <div><img src="<?php echo base_url(); ?>asset/banner/<?php echo $bn2['gambar']; ?>" height="20"/>
-        <h3><?php echo strip_tags(substr($bn2['judul'],0,25)); ?>...</h3> 
-		<span class=tanggal><?php echo strip_tags(substr($bn2['deskripsi'],0,70)); ?>...</span> 
-        </div> 
-    </li>
-	<?php
-		}
-	?>
-	</ul> 
-    </div> 
-</div> 
-
-
-
+<div class="slider-wrapper theme-default">
+ 	<div id="slider" class="nivoSlider">
+	 	<?php foreach($banner->result_array() as $bn):?>
+			<img title="#slide-caption<?php echo $bn['kode_banner'];?>" src="<?php echo base_url(); ?>asset/banner/<?php echo $bn['gambar']; ?>" data-thumb="<?php echo base_url(); ?>asset/banner/<?php echo $bn['gambar']; ?>">
+		<?php endforeach;?>
+  	</div>
+  	<div id="slider-caption">
+	  	<?php foreach($banner->result_array() as $bn):?>
+	  	<div id="slide-caption<?php echo $bn['kode_banner'];?>" class="nivo-html-caption">
+	  		<h3 style="margin: 0px;"><?php echo $bn['judul'];?></h3> 
+			<span><?php echo $bn['deskripsi'];?></span>
+	  	</div>
+	    <?php endforeach;?>
+    </div>
 </div>
+</div>
+
 <div id="menu-bawah">
 <div id="smoothmenu1" class="ddsmoothmenu">
 	<ul>

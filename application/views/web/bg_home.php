@@ -1,14 +1,19 @@
 <div id="content-center">
-<h1>Kami Hadir Untuk Anda | Harmonis Grosir Sandal Online</h1>
-Assalamualaikum wr. Wb<br />
-<p align="justify">SELAMAT DATANG di Harmonis Grosir sandal.com.  grosir sandal  Termurah dan Terlengkap.
-Kami menyadari Indonesia begitu luas, untuk itulah kami hadir sebagai solusi untuk anda yang belum menjadi pelanggan atau yang sudah menjadi pelanggan kami dari uar kota agar tidak di repotkan dengan pemilihan model sandal .</p>
-<p align="justify">Dengan prinsip bisnis JUJUR dan Amanah kami memulai bisnis ini, dari yang dahulu menjual dor to dor kemudian mulai nganvas ke pasar-pasar dan Alhamdulillah sekarang udah ke Online. Harapan kami semoga produk  kami bisa diterima di pasaran dalam dan luar negeri. Amien..</p>
-<p align="justify">Untuk melakukan order Anda harus menjadi member terlebih dahulu jika belum Anda dengan mudah bisa mendaftar sebagai member dengan cara mengklik <a href="<?php echo base_url(); ?>member">"<strong>Member Area</strong>"</a>. Untuk keterangan lebih detail dengan cara belanja anda bisa melihat bagian halaman <a href="<?php echo base_url(); ?>cara_belanja">"<strong>Cara Belanja</strong>"</a>. Bila anda menemui kesulitan jangan sungkan untuk menghubungi bagian costumer service kami via YM atau Anda juga bisa menghubungi Hotline kami di 081916675856. Kepuasan Anda adalah bagian dari kebanggan kami.</p>
-Selamat berbelanja...<br /><br />
-Salam owner<br />
-HERI KUSWANTO
-
+<div id="welcome-content">
+	<section class="welcome-content-header">
+		<h1>Kami Hadir Untuk Anda | LAPAKCMS</h1>
+	</section>
+	<section class="welcome-content-content">
+		Assalamualaikum wr. Wb<br />
+		<p align="justify">SELAMAT DATANG di Harmonis Grosir sandal.com.  grosir sandal  Termurah dan Terlengkap.
+		Kami menyadari Indonesia begitu luas, untuk itulah kami hadir sebagai solusi untuk anda yang belum menjadi pelanggan atau yang sudah menjadi pelanggan kami dari uar kota agar tidak di repotkan dengan pemilihan model sandal .</p>
+		<p align="justify">Dengan prinsip bisnis JUJUR dan Amanah kami memulai bisnis ini, dari yang dahulu menjual dor to dor kemudian mulai nganvas ke pasar-pasar dan Alhamdulillah sekarang udah ke Online. Harapan kami semoga produk  kami bisa diterima di pasaran dalam dan luar negeri. Amien..</p>
+		<p align="justify">Untuk melakukan order Anda harus menjadi member terlebih dahulu jika belum Anda dengan mudah bisa mendaftar sebagai member dengan cara mengklik <a href="<?php echo base_url(); ?>member">"<strong>Member Area</strong>"</a>. Untuk keterangan lebih detail dengan cara belanja anda bisa melihat bagian halaman <a href="<?php echo base_url(); ?>cara_belanja">"<strong>Cara Belanja</strong>"</a>. Bila anda menemui kesulitan jangan sungkan untuk menghubungi bagian costumer service kami via YM atau Anda juga bisa menghubungi Hotline kami di 081916675856. Kepuasan Anda adalah bagian dari kebanggan kami.</p>
+		Selamat berbelanja...<br /><br />
+		Salam owner<br />
+		HERI KUSWANTO
+	</section>
+</div>
 <div class="cleaner_h20"></div>
 <?php
 foreach($slide_produk_home->result_array() as $sph)

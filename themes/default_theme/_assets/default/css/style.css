@@ -1,0 +1,108 @@
+@IMPORT url("sidebar.css");
+body {
+	background-image: url(../img/ps_neutral.png);
+	background-repeat: repeat;
+}
+
+#inner-logo {
+	float: right;
+	padding-top: 25px;
+	height: 40px;
+	width: 460px;
+	text-align: right;
+}
+
+#menu-kiri {
+	background: none repeat scroll 0 0 #E34A06;
+	border: 1px solid #FF7A3F;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 1px 0 rgba(127, 40, 1, 0.35);
+	margin: 0;
+	width: 980px;
+}
+
+#menu-kiri ul {
+	display: inline;
+    height: 45px;
+    line-height: 45px;
+    list-style: none outside none;
+    margin-left: 0;
+}
+
+#menu-kiri ul li:not(#search) {
+	float: left;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color #FF7A3F -moz-use-text-color
+		-moz-use-text-color;
+	border-image: none;
+	border-style: none solid none none;
+	border-width: medium 1px medium medium;
+	box-shadow: 0 0 0 rgba(0, 0, 1, 0);
+}
+
+#menu-kiri ul li#search {
+	float: left;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color #FF7A3F -moz-use-text-color
+		-moz-use-text-color;
+	box-shadow: 0 0 0 rgba(0, 0, 1, 0);
+}
+
+#menu-kiri ul li a{
+	padding: 15px;
+	padding-left: 35px;
+}
+
+#menu-kiri ul li a:hover{
+	background: none repeat scroll 0 0 #E34A06;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.31) inset;
+}
+
+#menu-kiri ul li img{
+	position: absolute;
+	margin-left: 8px;
+	margin-top: 9px;
+}
+
+#menu-kiri #search{
+	padding-top: 8px;
+	padding-left: 5px;
+}
+
+#welcome-content{
+	background: linear-gradient(#FDFBF9, #EEEEEE) repeat scroll 0 0 transparent;
+    border: 1px solid #D3D1D0;
+    border-radius: 10px 10px 10px 10px;
+    height: 100%;
+}
+
+.welcome-content-header{
+	border-radius: 10px 10px 0 0;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.12);
+    padding-top: 12px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.welcome-content-content{
+	padding: 10px;
+}
+
+#footer {
+	margin: 0px auto;
+	padding-top: 20px;
+	width: 100%;
+	background-image: url(../img/bg-ilustration.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 380px;
+	clear: both;
+	color: #E34A06;
+}

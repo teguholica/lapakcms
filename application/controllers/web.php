@@ -11,7 +11,7 @@ class Web extends CI_Controller {
 	function index()
 	{
 		$data['menu'] = $this->sandal_model->menu_kategori('0','0');
-		$data['judul'] = "Grosir Sandal Online, Toko Sandal Online Termurah dan Terlengkap di Indonesia - Harmonis Grosir Sandal";
+		$data['judul'] = "LAPAKCMS - Easy online shop";
 		$data['slide_atas'] = $this->sandal_model->tampil_slide_produk(10);
 		$data['slide_laris'] = $this->sandal_model->tampil_slide_produk_terlaris_kiri(5);
 		$data['slide_produk_home'] = $this->sandal_model->tampil_produk(15);
