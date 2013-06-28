@@ -111,6 +111,17 @@ $autoload['language'] = array();
 
 $autoload['model'] = array('sandal_model');
 
+/*
+| -------------------------------------------------------------------
+|  Auto-load Sparks
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['sparks'] = array('spark1/x.x.x', 'spark2/x.x.x');
+|
+*/
+
+$autoload['sparks'] = array('template/1.9.0');
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */

@@ -87,7 +87,7 @@ if ( ! function_exists('create_captcha'))
 
 		$current_dir = @opendir($img_path);
 
-		while($filename = @readdir($current_dir))
+		while ($filename = @readdir($current_dir))
 		{
 			if ($filename != "." and $filename != ".." and $filename != "index.html")
 			{
@@ -108,7 +108,7 @@ if ( ! function_exists('create_captcha'))
 
 	   if ($word == '')
 	   {
-			$pool = '123456789ABCDEFGHIJKLMNPQRSTUVWXYZ';
+			$pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 			$str = '';
 			for ($i = 0; $i < 8; $i++)

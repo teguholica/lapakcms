@@ -26,11 +26,13 @@ class Profil_sandal_online extends CI_Controller {
 			$data["nama"]=$pecah[1];
 		}
 		
-		$this->load->view('web/bg_top',$data);
-		$this->load->view('web/bg_left',$data);
-		$this->load->view('web/bg_profil');
-		$this->load->view('web/bg_right');
-		$this->load->view('web/bg_bottom');
+// 		$this->load->view('web/bg_top',$data);
+// 		$this->load->view('web/bg_left',$data);
+// 		$this->load->view('web/bg_profil');
+// 		$this->load->view('web/bg_right');
+// 		$this->load->view('web/bg_bottom');
+		$this->template->set_layout('default');
+		$this->template->build('profile','profile',$data);
 	}
 }
 

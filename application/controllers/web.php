@@ -26,11 +26,13 @@ class Web extends CI_Controller {
 			$data["nama"]=$pecah[1];
 		}
 		
-		$this->load->view('web/bg_top',$data);
-		$this->load->view('web/bg_left',$data);
-		$this->load->view('web/bg_home');
-		$this->load->view('web/bg_right');
-		$this->load->view('web/bg_bottom');
+// 		$this->load->view('web/bg_top',$data);
+// 		$this->load->view('web/bg_left',$data);
+// 		$this->load->view('web/bg_home');
+// 		$this->load->view('web/bg_right');
+// 		$this->load->view('web/bg_bottom');
+		$this->template->set_layout('default');
+		$this->template->build('home','home',$data);
 	}
 }
 
